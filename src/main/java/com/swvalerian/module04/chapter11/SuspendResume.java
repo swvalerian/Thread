@@ -1,11 +1,11 @@
-// Приостановка и возобновление исполнения потока современным способом
+package main.java.com.swvalerian.module04.chapter11;// Приостановка и возобновление исполнения потока современным способом
 
-class NewThread implements Runnable {
+class NewThread2 implements Runnable {
     String name;
     Thread t;
     boolean suspendFlag;
 
-    NewThread(String threadName) {
+    NewThread2(String threadName) {
         name = threadName;
         t = new Thread(this, name);
         System.out.println("Новый поток - " + t);
@@ -42,8 +42,8 @@ class NewThread implements Runnable {
 
 public class SuspendResume {
     public static void main(String[] args) {
-        NewThread nt1 = new NewThread("Первый");
-        NewThread nt2 = new NewThread("Второй");
+        NewThread2 nt1 = new NewThread2("Первый");
+        NewThread2 nt2 = new NewThread2("Второй");
 
         try {
             Thread.sleep(1000);
