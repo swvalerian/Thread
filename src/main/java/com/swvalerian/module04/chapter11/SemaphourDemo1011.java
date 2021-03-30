@@ -6,6 +6,7 @@ import java.util.concurrent.Semaphore;
 public class SemaphourDemo1011 {
     public static void main(String[] args) {
         Semaphore sem = new Semaphore(1);
+        Semaphore sem2 = new Semaphore(1);
 
         new IncThread(sem, "A");
         new DecThread(sem, "B");
@@ -38,8 +39,8 @@ class IncThread implements Runnable {
             System.out.println("Поток - " + name + " получил разрешение.");
 
             for (int i = 0; i < 6; i++) {
-                System.out.println(" i = " + i);
-                System.out.println(name + " : " + Shared.count++);
+//                System.out.println(" i = " + i);
+                System.out.println(name + " : " + ++Shared.count);
 
                 // поставим паузу и если можно, то переключим контекст
                 Thread.sleep(1000);
@@ -75,7 +76,7 @@ class DecThread implements Runnable {
             System.out.println("Поток - " + name + " получил разрешение.");
 
             for (int i = 6; i > 0; i--) {
-                System.out.println("i = " + i);
+//                System.out.println("i = " + i);
                 System.out.println(name + " : " + Shared.count--);
 
                 // поставим паузу и если можно, то переключим контекст
