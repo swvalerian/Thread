@@ -87,6 +87,11 @@ public class ProduceConsumer307 {
         Q q = new Q();
         new Consumer(q);
         new Producer(q);
+        try {
+            Thread.sleep(1444);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("Ддля остановки нажмите Ctrl+C");
     }
 }

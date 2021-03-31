@@ -6,7 +6,6 @@ import java.util.concurrent.Semaphore;
 public class SemaphourDemo1011 {
     public static void main(String[] args) {
         Semaphore sem = new Semaphore(1);
-        Semaphore sem2 = new Semaphore(1);
 
         new IncThread(sem, "A");
         new DecThread(sem, "B");

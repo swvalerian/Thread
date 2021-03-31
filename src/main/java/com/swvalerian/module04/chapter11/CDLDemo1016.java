@@ -6,6 +6,7 @@ public class CDLDemo1016 {
     public static void main(String[] args) {
         CountDownLatch countDownLatch = new CountDownLatch(4);
         System.out.println("ЗАпуск потока исполнения...");
+
         new MyThreadCDL(countDownLatch);
 
         try {
