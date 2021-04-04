@@ -43,6 +43,7 @@ class Foo {
             e.printStackTrace();
         }
         System.out.print("Third");
+        sem3.release();
     }
 }
 

@@ -4,16 +4,17 @@ import java.util.concurrent.Semaphore;
 
 public class PraktikaEx1Var2 {
     public static void main(String[] args) {
-        Foo foo = new Foo();
+        Foo1 foo1 = new Foo1();
 
-        new Aaa(foo, "AAA");
-        new Bbb(foo, "BBB");
-        new Ccc(foo, "CCC");
+        new Aaa1(foo1, "AAA");
+        new Bbb1(foo1, "BBB");
+        new Ccc1(foo1, "CCC");
+
     }
 }
 
 class Foo1 {
-    static Semaphore sem1 = new Semaphore(3, true);
+    static Semaphore sem1 = new Semaphore(1);
 
     public void first() {
         try {
