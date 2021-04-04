@@ -15,7 +15,7 @@ public class FizzBuzzVer1 {
             fb.nextItem = true; // вот после этого, сработает случайный метод одного из четырех потоков,
             while (fb.nextItem != false) {
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(5);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -122,21 +122,21 @@ class FizzBuzz {
 
     public void fizzBuzz() {
         if ((item % 3)==0 && (item % 5)==0) {
-            System.out.print("fizzbuz" + item + ",");
+            System.out.print("fizzbuz,");
             nextItem = false;
         }
     }
 
     public void fizz() {
         if ((item % 3) == 0 && (item % 5) != 0 ) {
-            System.out.print("fizz" + item + ",");
+            System.out.print("fizz,");
             nextItem = false;
         }
     }
 
     public void buzz() {
         if ((item % 5) == 0 && (item % 3) != 0 ) {
-            System.out.print("buzz" + item + ",");
+            System.out.print("buzz,");
             nextItem = false;
         }
     }
