@@ -1,4 +1,4 @@
-package main.java.com.swvalerian.module04.chapter11;
+package main.java.com.swvalerian.module04.chapter28;
 
 import java.util.concurrent.*;
 
@@ -11,14 +11,16 @@ public class CallableDemo1033 {
 
         System.out.println("Запуск");
 
-        f1 = ex.submit(new Sum(10));
+        f1 = ex.submit(new Sum(9));
         f2 = ex.submit(new Hypot(4.0, 6.0));
         f3 = ex.submit(new Factorial(8));
 
-        System.out.println(f1.get(10, TimeUnit.SECONDS));
-        System.out.println(f2.get(5, TimeUnit.SECONDS));
-        System.out.println(f3.get(1, TimeUnit.SECONDS));
+        System.out.println(f1.get(1000, TimeUnit.SECONDS));
+        System.out.println(f2.get(3000, TimeUnit.SECONDS));
+        System.out.println(f3.get(2000, TimeUnit.SECONDS));
+
         ex.shutdown();
+
         System.out.println("Завершение");
     }
 }
@@ -32,7 +34,7 @@ class Sum implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         int sum = 0;
-        for (int i = 1; i <=stop; i++) {
+        for (int i = 1; i <= stop; i++) {
             sum += i;
         }
         return sum;

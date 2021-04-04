@@ -1,4 +1,4 @@
-package main.java.com.swvalerian.module04.chapter11;
+package main.java.com.swvalerian.module04.chapter28;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

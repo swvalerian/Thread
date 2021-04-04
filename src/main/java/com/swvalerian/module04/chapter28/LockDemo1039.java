@@ -1,8 +1,5 @@
-package main.java.com.swvalerian.module04.chapter11;
+package main.java.com.swvalerian.module04.chapter28;
 
-import org.w3c.dom.ls.LSOutput;
-
-import javax.crypto.spec.PSource;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class LockDemo1039 {
@@ -61,7 +58,6 @@ class LockThread implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         reentrantLock.unlock();
         System.out.println("Поток " + name +"разблокировал счетчик!"); // это сообщение обычно выводится уже после того, как
         // другой поток - захвативший блокировку, отпишется о том, что он обладает блокировкой
