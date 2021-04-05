@@ -120,28 +120,28 @@ class FizzBuzz {
         nextItem = false;
     }
 
-    public void fizzBuzz() {
+    public synchronized void fizzBuzz() {
         if ((item % 3)==0 && (item % 5)==0) {
             System.out.print("fizzbuz,");
             nextItem = false;
         }
     }
 
-    public void fizz() {
+    public synchronized void fizz() {
         if ((item % 3) == 0 && (item % 5) != 0 ) {
             System.out.print("fizz,");
             nextItem = false;
         }
     }
 
-    public void buzz() {
+    public synchronized void buzz() {
         if ((item % 5) == 0 && (item % 3) != 0 ) {
             System.out.print("buzz,");
             nextItem = false;
         }
     }
 
-    public void number() {
+    public synchronized void number() {
         if (((item % 5) != 0) && ((item % 3) != 0 )) {
             System.out.print(item + ",");
             nextItem = false;
